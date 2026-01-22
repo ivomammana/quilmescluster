@@ -1,0 +1,878 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --bg-main: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --primary: #2563eb;
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+/* BASE */
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+/* TÍTULO */
+.title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.title-main {
+  display: block;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  letter-spacing: 0.05em;
+}
+
+.title-sub {
+  display: block;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* LABEL */
+label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===== PLAYER SELECTOR ===== */
+.player-selector {
+  max-width: 400px;              /* un poco más ancho */
+  margin: 3rem auto;             /* separado de las cards */
+  padding: 1.5rem 1.25rem;       /* espacio interior */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: linear-gradient(135deg, #111, #1a1a1a); /* fondo oscuro con degradado */
+  border-radius: 16px;           /* bordes redondeados */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35); /* sombra para destacar */
+  border: 2px solid #ff7a00;     /* borde naranja similar al banner */
+}
+
+/* LABEL */
+.player-selector label {
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: 600;
+}
+
+/* SELECTOR */
+.player-selector select {
+  padding: 0.8rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.player-selector select:hover,
+.player-selector select:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.6);
+  outline: none;
+}
+
+/* BOTÓN */
+.player-selector button {
+  padding: 0.9rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  background: #ff7a00;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.player-selector button:enabled {
+  opacity: 1;
+}
+
+.player-selector button:hover:enabled {
+  background: #ff9500;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.5);
+}
+
+.player-selector button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* ===== RESET BÁSICO ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== CONTENEDOR ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== HEADER JUGADOR MODIFICADO ===== */
+.player-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(145deg, #111, #1f1f1f);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* permite que se adapte en mobile */
+}
+
+/* FOTO DEL JUGADOR */
+.player-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #444, #222);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  flex-shrink: 0; /* no se achique */
+}
+
+/* CONTENEDOR DERECHA: INFO + RANK */
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 220px;
+  gap: 30px; /* separación entre columnas */
+  flex-wrap: wrap;
+}
+
+/* COLUMNA IZQUIERDA: NOMBRE + ID */
+.player-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* NOMBRE */
+#playerName {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* ID */
+#playerId {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* COLUMNA DERECHA: RANK */
+.efficiency-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(145deg, #222, #111);
+  padding: 12px 16px;
+  border-radius: 12px;
+  min-width: 100px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.eff-label {
+  font-size: 12px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eff-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ff7a00;
+  line-height: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet / pantallas medianas */
+@media (max-width: 900px) {
+  .player-header {
+    padding: 24px 28px;
+    gap: 24px;
+  }
+
+  .player-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  #playerName {
+    font-size: 28px;
+  }
+
+  .eff-value {
+    font-size: 40px;
+  }
+}
+
+/* Mobile / pantallas pequeñas */
+@media (max-width: 600px) {
+  .player-header {
+    flex-direction: row; /* seguir en fila */
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .player-info {
+    flex-direction: row; /* nombre + rank lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .player-main {
+    flex: 1; /* nombre + id ocupan más espacio */
+  }
+
+  .efficiency-box {
+    flex-shrink: 0; /* que el rank no se achique */
+  }
+
+  .player-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+/* ===== SECCIONES ===== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== GRID PROMEDIOS ===== */
+.averages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+/* CARD STAT */
+.averages-grid > div {
+  background: linear-gradient(145deg, #141414, #1f1f1f);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.averages-grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.7);
+}
+
+.averages-grid strong {
+  display: block;
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.averages-grid div {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== TABLA PARTIDOS ===== */
+.games table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.games thead {
+  background: #1d1d1d;
+}
+
+.games th,
+.games td {
+  padding: 14px 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.games th {
+  font-weight: 600;
+  color: #aaa;
+}
+
+.games tbody tr {
+  border-bottom: 1px solid #222;
+}
+
+.games tbody tr:hover {
+  background: #1a1a1a;
+}
+
+.efficiency-box {
+  display: flex;
+  flex-direction: column; /* 👈 CLAVE */
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* separación entre número y label */
+}
+
+.eff-value {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.eff-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .player-header {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .player-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  #playerName {
+    font-size: 24px;
+  }
+
+  #playerId {
+    font-size: 14px;
+  }
+
+  .eff-value {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .player-header {
+    padding: 24px;
+  }
+
+  .player-left {
+    gap: 20px;
+  }
+
+  #playerName {
+    font-size: 26px;
+  }
+
+  .eff-value {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .eff-value {
+    font-size: 48px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .player-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+.stat-value {
+  display: block;
+  font-size: 34px;   /* ajustá a gusto */
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.toggle-games-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #1f1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.toggle-games-btn:hover {
+  background: #333;
+}
+
+.efficiency-box {
+  text-align: center ;
+}
+
+.eff-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.eff-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.eff-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.eff-value {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+/* =========================
+   RANKING GRIDS
+========================= */
+
+/* 📌 Sección de ranking destacada */
+#ranking {
+  padding: 3rem 1.5rem; /* más espacio arriba/abajo y lateral */
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1400px; /* más ancho en escritorio */
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+/* Título de la sección */
+.ranking-title {
+  color: #ff7a00;
+  font-size: 1.8rem; /* un poco más grande */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* GRID DE CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+  gap: 28px; /* un poco más de espacio */
+}
+
+/* CARD INDIVIDUAL */
+.card {
+  cursor: pointer;
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  padding: 28px 24px 30px; /* más padding para hacerla más grande */
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* más espacio entre elementos */
+
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* HOVER CARD */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 36px rgba(0,0,0,0.65), 0 0 10px rgba(255, 122, 0, 0.4);
+  background: linear-gradient(145deg, #1a1a1a, #222);
+}
+
+/* IMG DEL JUGADOR */
+.card img {
+  width: 96px; /* más grande */
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  background: #222;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.07);
+  box-shadow: 0 0 0 5px rgba(255, 122, 0, 0.5);
+}
+
+/* NOMBRE DEL JUGADOR */
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 4px 0 0;
+}
+
+/* ESTADÍSTICA */
+.stat {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* VALOR DE LA ESTADÍSTICA */
+.value {
+  font-size: 2.6rem; /* más grande */
+  font-weight: 800;
+  color: #ff7a00;
+  margin-top: 4px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* 📱 TABLET: 2 columnas + cards ligeramente más grandes */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .card {
+    padding: 26px 20px 28px;
+    gap: 18px;
+  }
+
+  .card img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .value {
+    font-size: 2.3rem;
+  }
+
+  .stat {
+    font-size: 1.15rem;
+  }
+}
+
+/* 📱 MOBILE: 2 columnas + cards mucho más grandes y con más presencia */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 0.5rem; /* ocupa más ancho disponible */
+  }
+
+  .card {
+    padding: 30px 22px 32px; /* padding más grande */
+    gap: 18px;
+  }
+
+  .card img {
+    width: 96px;  /* más grande */
+    height: 96px;
+  }
+
+  .value {
+    font-size: 2.2rem; /* más grande */
+  }
+
+  .stat {
+    font-size: 1.25rem; /* más grande */
+  }
+}
+
+/* TOOLTIP ESTILOS */
+.stat-tooltip {
+  position: absolute;
+  background: #1c1c1c;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.stat-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-tooltip.hidden {
+  display: none;
+}
+
+
+
+
+
+/* ===== BANNER TEMPORADA ===== */
+
+.season-banner {
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  padding: 30px 30px;
+  margin-bottom: 24px;
+  border-bottom: 3px solid #ff7a00; /* naranja liga */
+}
+
+.banner-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  justify-content: space-between; /* 👈 CLAVE */
+}
+
+/* LOGO */
+.league-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+}
+
+.league-logo {
+  order: 2;   /* 👉 va a la derecha */
+}
+
+.banner-text {
+  order: 1;   /* 👉 queda a la izquierda */
+}
+
+/* TEXTO */
+.banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-text h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  position: relative;
+}
+
+.banner-text h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #ff7a00;
+  margin-top: 6px;
+}
+
+.banner-text .season {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ff7a00;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* ===== MOBILE APP STYLE ===== */
+@media (max-width: 600px) {
+  .banner-content {
+    align-items: center;
+    text-align: left;
+  }
+}
+  .league-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .banner-text {
+    align-items: flex-start;
+  }
+
+  .banner-text h1 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .banner-text .season {
+    font-size: 0.85rem;
+  }
+
+
+.section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #ff7a00;
+  margin-top: 6px;
+}
+
+.games-table-wrapper {
+  overflow-x: auto;
+}
+
+.games table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.games th,
+.games td {
+  padding: 8px 6px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.games thead th {
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.games tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* ===== FOOTER APP ===== */
+
+.app-footer {
+  margin-top: 48px;
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  border-top: 3px solid #ff7a00; /* naranja liga */
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9ca3af;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 16px 12px;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}

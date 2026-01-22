@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jugador | Quilmes Cluster</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BANNER SUPERIOR -->
+  <header class="season-banner">
+    <div class="banner-content">
+      <img src="assets/players/logoliga.png" 
+           alt="Liga Quilmes Cluster" 
+           class="league-logo">
+
+      <div class="banner-text">
+        <h1>Rendimiento del jugador</h1>
+        <span class="season">Season 26</span>
+      </div>
+    </div>
+  </header>
+
+
+<div class="container">
+
+  <!-- HEADER JUGADOR -->
+  <header class="player-header">
+    
+    <!-- FOTO -->
+    <div class="player-photo" id="playerPhoto"></div>
+
+    <!-- INFO DEL JUGADOR -->
+    <div class="player-info">
+      
+      <!-- COLUMNA IZQUIERDA: NOMBRE + ID -->
+      <div class="player-main">
+        <h1 id="playerName">Jugador</h1>
+        <span id="playerId">ID</span>
+      </div>
+
+      <!-- COLUMNA DERECHA: WINRATE -->
+      <div class="efficiency-box">
+        <span class="eff-label">WINRATE</span>
+        <span id="efficiencyValue" class="eff-value">–</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- PROMEDIOS POR PARTIDO -->
+  <section class="averages">
+    <h3 class="section-title">Promedios por partido</h3>
+    <div id="averagesGrid" class="averages-grid"></div>
+  </section>
+
+  <!-- PARTIDOS -->
+  <section class="games">
+    <h3 class="section-title">Partidos</h3>
+
+    <div class="games-table-wrapper">
+      <table id="gamesTable">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <button id="toggleGames" class="toggle-games-btn">
+    Ver todos los partidos
+  </button>
+
+</div>
+
+<script src="player.js"></script>
+
+<div id="statTooltip" class="stat-tooltip hidden"></div>
+
+</body>
+</html>

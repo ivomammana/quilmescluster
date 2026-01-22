@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quilmes Cluster</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/players/favi.png">
+</head>
+
+
+
+<body>
+
+ <!-- BANNER SUPERIOR -->
+<header class="season-banner">
+  <div class="banner-content">
+    <img src="assets/players/logoliga.png" alt="Liga Quilmes Cluster" class="league-logo">
+
+
+    <div class="banner-text">
+      <h1>Promedios de la Temporada</h1>
+      <span class="season">Season 26</span>
+    </div>
+  </div>
+</header>
+
+
+  <!-- CONTENIDO -->
+  <main class="container">
+
+    <section id="ranking">
+      <div id="rankingCards" class="cards"></div>
+    </section>
+
+    <div class="player-selector">
+      <label for="playerSelect">Buscar Jugador</label>
+      <select id="playerSelect"></select>
+      <button id="viewPlayerBtn" disabled>VER</button>
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+  <div class="footer-content">
+    <span class="footer-text">
+      © 2026 Quilmes Cluster — Todos los derechos reservados
+    </span>
+  </div>
+</footer>
+
+
+  <script src="app.js"></script>
+  <script src="ranking.js"></script>  
+
+</body>
+
+</html>
